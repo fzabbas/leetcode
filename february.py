@@ -19,7 +19,17 @@ def twoSum(nums, target):
     else:
       hashmap[num] = i
 
-nums = [3,2,4]
-target = 6
-print(twoSum(nums, target))
+def isPalindromeNum(num):
+  if num < 0:
+    return False
 
+  list = []
+  while num!= 0:
+    list.append(num%10)
+    num = num//10
+  # while num != 0:
+  #   list.append(num%10)
+  #   print(list)
+
+  # list = [int(x) for x in str(num)]
+  return (list == list[::-1])
